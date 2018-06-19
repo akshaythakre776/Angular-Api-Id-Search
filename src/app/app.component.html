@@ -1,0 +1,18 @@
+<h1>
+  {{title}}
+</h1>
+
+<input name="search" #searchTerm>
+
+<button (click)="performSearch(searchTerm)">Search</button>
+
+<br>
+
+<div>
+    <ul *ngFor="let apidata of searchApi">
+      <li>{{apidata.fname}}</li>
+      <li>{{apidata.lname}}</li>
+      <li>{{apidata.add}}</li>
+      <li>{{apidata.salary}}</li>
+    </ul>
+</div>
